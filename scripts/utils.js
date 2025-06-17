@@ -29,7 +29,7 @@ export const addElements = (e) => {
     return;
   }
 
-  if (valueTask.length < 3) {
+  if (valueTask.length < 4) {
     alert("Please enter a task with at least 4 characters.");
     inputTask.value = " ";
     return;
