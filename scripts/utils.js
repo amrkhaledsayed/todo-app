@@ -23,7 +23,13 @@ export const initTaskList = (tasks) => {
 export const addElements = (e) => {
   e.preventDefault();
   let valueTask = inputTask.value.trim();
-  if (!valueTask || valueTask.length < 3) {
+  if (!valueTask) {
+    alert("Please enter a task");
+    inputTask.value = " ";
+    return;
+  }
+
+  if (valueTask.length < 3) {
     alert("Please enter a task with at least 4 characters.");
     inputTask.value = " ";
     return;
